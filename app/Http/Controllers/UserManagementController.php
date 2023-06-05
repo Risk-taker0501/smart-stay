@@ -16,6 +16,7 @@ class UserManagementController extends Controller
     	$member = User::find($id);
     	$input = $request->all();
 		$member->fill($input)->save();
+        $result = $member;
     	return $member;
     }
     public function delete($id)
